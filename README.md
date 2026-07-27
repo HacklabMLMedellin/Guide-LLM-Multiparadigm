@@ -53,14 +53,28 @@ Thermodynamic computing (via energy-based models and Gibbs/Boltzmann-style sampl
 The project follows an incremental, "build it to understand it" workflow, moving from a minimal classical baseline to two experimental branches:
 
 ```
+Foundations
+├── Probability & Statistics
+├── Linear Algebra
+└── Computer Science Fundamentals 
+
 1. nanoGPT (Andrej Karpathy)      →  minimal, from-scratch GPT
 2. GPT-2                          →  intermediate-scale classical LLM
 3. CS336 – Stanford               →  advanced, full training/systems pipeline
                                         |
                     ┌───────────────────┴───────────────────┐
-                    |                                        |
-            Quantum LLM branch                    Thermodynamic LLM branch
-            (built with PennyLane)                (built with THRML)
+                    │                                       │
+        Quantum LLM Module                     Thermodynamic LLM Module
+        (built with PennyLane)                 (built with THRML)
+
+                    └───────────────────┬───────────────────┘
+                                        │
+                                        │
+                                        │
+                           Hybrid Adaptive LLM
+        (combines Classical, Quantum, and Thermodynamic modules,
+         dynamically selecting or combining them whenever each
+         paradigm is best suited for the computation.)
 ```
 
 | Stage | Reference | What it teaches |
@@ -94,6 +108,36 @@ Beyond the technical exploration, a goal of this project is to **learn by buildi
 ## Status
 
 🚧 Early-stage, educational research project — expect breaking changes as each paradigm branch matures.
+
+# Project Timeline
+
+| Week(s) | Focus |
+|----------|-------|
+| **Week 1** | Project planning and roadmap |
+| **Week 2** | Computer Science foundations behind **Quantum Computing** and **Thermal Computing** |
+| **Week 3** | Linear Algebra foundations |
+| **Week 4** | Probability foundations |
+| **Weeks 5–6** | Implement and study **nanoGPT** |
+| **Weeks 7–10** | Implement and study **GPT-2** |
+| **Weeks 10–15** | Build an industrial-scale language model |
+| **Weeks 15–20** | Implement **Quantum Language Models** |
+| **Weeks 20–25** | Implement **Thermal Language Models** |
+| **Weeks 25–30** | Integrate and combine **classical**, **quantum**, and **thermal** computing principles into a hybrid language model |
+
+
+# Resources
+
+- **Thermal Computer (Simulation):**
+  - Extropic Simulator
+
+- **Quantum Computer:**
+  - Pennylane
+
+- **Classical Computer:**
+  - 32-core Apollo workstation/server
+
+- **Language Model Dataset:**
+  - Depends on the selected training tutorial (e.g., TinyStories, FineWeb, The Pile, or Common Crawl derivatives)
 
 ## Contributing
 
