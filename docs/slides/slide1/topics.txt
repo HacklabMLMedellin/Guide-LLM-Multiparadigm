@@ -1,0 +1,50 @@
+https://chatgpt.com/share/6a6a5fc4-c5e8-83e9-8120-504b5f5467ec
+https://claude.ai/share/7b096d0e-261e-467b-8c61-46dca6c739e6
+
+Cmos
+
+Why noise, how to is avoided?
+why important?
+There is an open source TSU
+we can make one with fpga
+pbit,qbit,bit
+drivers
+- characters
+- chunks
+protocols
+thermodinamic and noise?
+
+
+If there is too little noise(low temperature):
+
+Gets stuck.
+
+If there is too much noise(high temperatuere):
+
+Jumps everywhere randomly.
+
+you can build a digital emulator/prototype of a thermodynamic computer on 
+an FPGA.
+
+| Can you do this on an FPGA?                          | Yes/No |
+| ---------------------------------------------------- | ------ |
+| Simulate Gibbs sampling                              | ✅ Yes  |
+| Implement Energy-Based Models (EBMs)                 | ✅ Yes  |
+| Build pbits digitally using PRNGs                    | ✅ Yes  |
+| Prototype the architecture of a TSU                  | ✅ Yes  |
+| Build a real transistor-noise thermodynamic computer | ❌ No   |
+| Get the same energy efficiency as Extropic           | ❌ No   |
+
+LFSRs
+Xorshift
+ChaCha PRNG
+Hardware RNG
+
+
+Thousands of digital pbits
+Graph-colored block Gibbs sampling
+Energy-Based Models
+Boltzmann Machines
+Ising models
+Denoising Thermodynamic Models (DTMs)
+A compiler that maps a graph directly to FPGA routing
