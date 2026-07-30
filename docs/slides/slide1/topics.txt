@@ -1,18 +1,18 @@
 https://chatgpt.com/share/6a6a5fc4-c5e8-83e9-8120-504b5f5467ec
 https://claude.ai/share/7b096d0e-261e-467b-8c61-46dca6c739e6
-
-Cmos
+https://postquantum.com/building-quantum-computers/quantum-hpc-integration-nvqlink/
+https://everydaysworld9980.medium.com/quantum-computing-systems-design-components-and-capabilities-b3fb3b4722cc
 
 Why noise, how to is avoided?
 why important?
-There is an open source TSU
+There is an open source TSU, nop but (reverse enginiering bratam https://github.com/jero98772/arreBatEro/tree/main/tsu_fpga)
 we can make one with fpga
 pbit,qbit,bit
 drivers
 - characters
 - chunks
 protocols
-thermodinamic and noise?
+thermodinamic and noise? how to handle that noise
 
 
 If there is too little noise(low temperature):
@@ -35,6 +35,8 @@ an FPGA.
 | Build a real transistor-noise thermodynamic computer | ❌ No   |
 | Get the same energy efficiency as Extropic           | ❌ No   |
 
+
+
 LFSRs
 Xorshift
 ChaCha PRNG
@@ -48,3 +50,22 @@ Boltzmann Machines
 Ising models
 Denoising Thermodynamic Models (DTMs)
 A compiler that maps a graph directly to FPGA routing
+
+PBIT
+
+02
+PDIT
+
+03
+PMODE
+
+04
+PMOG
+
+diferent ways to make a probabilistic bit
+
+hardware detras de quantum and termodinamic compters
+
+cmos
+verilog
+
