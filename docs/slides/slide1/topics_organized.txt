@@ -1,0 +1,687 @@
+
+
+# 1. Why New Computing Architectures?
+
+Artificial Intelligence is growing faster than traditional computer architectures.
+
+Modern AI workloads require enormous amounts of:
+
+* Matrix multiplication
+* Memory bandwidth
+* Random sampling
+* Optimization
+* Energy
+
+The question becomes:
+
+> Can we build hardware that computes differently instead of simply making CPUs and GPUs faster?
+
+This leads to three major paradigms:
+
+* Classical Computing
+* Quantum Computing
+* Thermodynamic Computing
+
+---
+
+# 2. Three Ways to Compute
+
+| Classical        | Quantum                      | Thermodynamic               |
+| ---------------- | ---------------------------- | --------------------------- |
+| Deterministic    | Quantum mechanics            | Statistical physics         |
+| Bits             | Qubits                       | Probabilistic bits (p-bits) |
+| Exact operations | Superposition & interference | Controlled randomness       |
+| Logic circuits   | Quantum gates                | Stochastic circuits         |
+
+Although they appear different, all three manipulate information using different physical principles.
+
+---
+
+# 3. Classical Computing
+
+Everything inside a CPU or GPU is built from deterministic logic.
+
+The fundamental unit is the bit.
+
+```
+0
+
+or
+
+1
+```
+
+The hardware tries to ensure that every operation produces exactly the same result every time.
+
+```
+2 + 2 = 4
+```
+
+Always.
+
+This predictability is the foundation of operating systems, databases, networking, and programming languages.
+
+---
+
+# 4. What is Noise?
+
+Every electronic circuit contains physical noise.
+
+Sources include:
+
+* Thermal motion
+* Electron movement
+* Electromagnetic interference
+* Shot noise
+* Flicker noise
+* Quantum effects
+
+Noise exists whether we want it or not.
+
+---
+
+# 5. Why Classical Computers Avoid Noise
+
+Suppose
+
+```
+5V = 1
+
+0V = 0
+```
+
+If noise changes
+
+```
+5.00V
+
+↓
+
+4.98V
+```
+
+the CPU still reads
+
+```
+1
+```
+
+But excessive noise may become
+
+```
+5V
+
+↓
+
+2.3V
+```
+
+Now the computer may incorrectly read
+
+```
+0
+```
+
+This becomes a hardware error.
+
+Because of this, classical hardware spends enormous effort reducing noise through:
+
+* Voltage margins
+* Error correction
+* Shielding
+* Clock synchronization
+* Stable CMOS circuits
+
+The semiconductor industry has spent decades fighting noise.
+
+---
+
+# 6. Thermodynamic Computing
+
+Thermodynamic computing asks a different question.
+
+Instead of removing noise,
+
+can we compute with it?
+
+Instead of deterministic bits,
+
+it uses probabilistic bits.
+
+---
+
+# 7. The Probabilistic Bit (p-bit)
+
+A p-bit is neither permanently 0 nor permanently 1.
+
+It continuously fluctuates.
+
+```
+111101111101111011
+```
+
+The probability of observing 0 or 1 depends on an input signal.
+
+Instead of storing certainty,
+
+the circuit stores probability.
+
+---
+
+# 8. Why Noise Becomes Useful
+
+Many AI algorithms already require randomness.
+
+Examples include
+
+* Monte Carlo
+* Gibbs Sampling
+* Markov Chain Monte Carlo
+* Diffusion Models
+* Bayesian Inference
+* Boltzmann Machines
+
+GPUs generate randomness digitally.
+
+Thermodynamic computers obtain randomness directly from physical fluctuations.
+
+Instead of computing randomness,
+
+they measure it.
+
+---
+
+# 9. Temperature and Noise
+
+Noise behaves similarly to temperature.
+
+Low temperature
+
+↓
+
+Very little randomness
+
+↓
+
+System gets trapped in local minima.
+
+High temperature
+
+↓
+
+Too much randomness
+
+↓
+
+System never converges.
+
+The optimal operating point balances exploration and convergence.
+
+This idea appears in:
+
+* Simulated Annealing
+* Gibbs Sampling
+* Boltzmann Machines
+* Thermodynamic Hardware
+
+---
+
+# 10. Gibbs Sampling
+
+Gibbs Sampling updates one variable at a time according to probability.
+
+```
+Current State
+
+↓
+
+Compute local probabilities
+
+↓
+
+Sample
+
+↓
+
+Update
+
+↓
+
+Repeat
+```
+
+Eventually,
+
+the system approaches the desired probability distribution.
+
+---
+
+# 11. Gradient Descent vs Gibbs Sampling
+
+Gradient Descent
+
+* Deterministic
+* Follows the steepest path
+* Can become trapped
+
+Gibbs Sampling
+
+* Stochastic
+* Explores multiple possibilities
+* Can escape local minima
+
+Thermodynamic hardware naturally accelerates sampling-based optimization.
+
+---
+
+# 12. Energy-Based Models
+
+Instead of predicting outputs directly,
+
+Energy-Based Models define an energy function.
+
+Lower energy
+
+↓
+
+Better solution
+
+The hardware repeatedly searches for lower-energy states.
+
+---
+
+# 13. Ising Models
+
+Many optimization problems can be represented as interacting spins.
+
+```
++1
+
+-1
+
++1
+
++1
+
+-1
+```
+
+The objective is to minimize the total energy.
+
+Applications include:
+
+* Routing
+* Scheduling
+* Graph Coloring
+* AI Optimization
+* Protein Folding
+
+---
+
+# 14. Boltzmann Machines
+
+Boltzmann Machines are neural networks built around stochastic neurons.
+
+Every neuron updates according to probability.
+
+Thermodynamic hardware is naturally suited to this computation.
+
+---
+
+# 15. Denoising Thermodynamic Models
+
+Instead of removing noise digitally,
+
+the hardware evolves noisy states until a stable solution emerges.
+
+Conceptually similar to diffusion models,
+
+but implemented through stochastic physical dynamics.
+
+---
+
+# 16. Why Quantum Computing Exists
+
+Quantum computers also perform probabilistic computation,
+
+but their randomness comes from quantum mechanics.
+
+They use
+
+* Superposition
+* Entanglement
+* Interference
+
+instead of thermal fluctuations.
+
+---
+
+# 17. Bits, p-bits, and Qubits
+
+Bit
+
+```
+0
+
+or
+
+1
+```
+
+p-bit
+
+```
+Mostly 0
+
+Sometimes 1
+```
+
+Qubit
+
+```
+Quantum superposition
+
+α|0⟩ + β|1⟩
+```
+
+Each represents information differently.
+
+---
+
+# 18. Comparing Computing Paradigms
+
+| Property    | Classical         | Thermodynamic             | Quantum                        |
+| ----------- | ----------------- | ------------------------- | ------------------------------ |
+| Information | Bit               | p-bit                     | Qubit                          |
+| Behavior    | Deterministic     | Probabilistic             | Quantum                        |
+| Noise       | Avoided           | Used                      | Quantum coherence              |
+| Best For    | Exact computation | Sampling and optimization | Certain specialized algorithms |
+
+---
+
+# 19. Software Stack Comparison
+
+| Module                | Classical | Quantum                    | Thermodynamic               |
+| --------------------- | --------- | -------------------------- | --------------------------- |
+| API                   | ✅         | ❌                          | ❌                           |
+| Tokenizer             | ✅         | ❌                          | ❌                           |
+| Embeddings            | ✅         | ⚠️ Quantum embeddings      | ⚠️ Analog embeddings        |
+| Vector Search         | ✅         | ✅ Quantum nearest neighbor | ✅ Associative memories      |
+| Attention             | ✅ GPU     | ⚠️ Experimental            | ✅ Stochastic optimization   |
+| Matrix Multiplication | ✅ GPU/TPU | ⚠️ HHL-like algorithms     | ✅ Analog crossbars          |
+| Feed Forward Layers   | ✅         | ⚠️                         | ✅ Analog MAC arrays         |
+| Sampling              | ✅         | ✅ Quantum sampling         | ✅ Boltzmann sampling        |
+| Routing (MoE)         | ✅         | ⚠️ QAOA                    | ✅ Gibbs sampling            |
+| Training              | ✅         | ⚠️ Quantum optimization    | ✅ Energy-based optimization |
+
+---
+
+# 20. Hardware Behind Classical AI
+
+Current AI accelerators include:
+
+* CPUs
+* GPUs
+* TPUs
+* NPUs
+
+These perform deterministic arithmetic at enormous scale.
+
+---
+
+# 21. Hardware Behind Quantum Computing
+
+A quantum computer is much more than a QPU.
+
+Its architecture includes:
+
+## Classical Control Server
+
+Runs the operating system.
+
+Schedules jobs.
+
+Coordinates execution.
+
+---
+
+## Control Electronics
+
+Contains
+
+* FPGAs
+* DACs
+* ADCs
+
+The FPGA translates digital instructions into precise analog waveforms.
+
+---
+
+## Transmission Lines
+
+Carry signals into the cryostat.
+
+Must minimize:
+
+* Heat
+* Loss
+* Electrical noise
+
+---
+
+## Quantum Processing Unit
+
+Receives microwave pulses.
+
+Performs quantum operations.
+
+Measures qubits.
+
+---
+
+# 22. NVIDIA's Quantum Software Ecosystem
+
+Important technologies include:
+
+* NVQLink
+* QRMI
+* CUDA-Q
+* Quantum Error Correction (QEC)
+* Reference deployments
+
+These bridge classical HPC systems with quantum hardware.
+
+---
+
+# 23. Extropic's Thermodynamic Computing
+
+Extropic proposes a Thermodynamic Processing Unit (TSU).
+
+Instead of eliminating transistor noise,
+
+the hardware exploits it.
+
+The transistor itself becomes a probabilistic computing element.
+
+---
+
+# 24. Can an FPGA Become a Thermodynamic Computer?
+
+Short answer:
+
+No.
+
+An FPGA cannot reproduce the analog transistor physics used in a true TSU.
+
+However,
+
+an FPGA can accurately emulate the algorithms and architecture of thermodynamic computing.
+
+---
+
+# 25. FPGA as a TSU Prototype
+
+An FPGA can implement:
+
+* Digital p-bits
+* Gibbs Sampling
+* Energy-Based Models
+* Ising Models
+* Hopfield Networks
+* Boltzmann Machines
+* Denoising Thermodynamic Models
+
+Architecture:
+
+```
+PRNG
+
+↓
+
+Digital p-bit
+
+↓
+
+Neighbor communication
+
+↓
+
+Gibbs update
+
+↓
+
+Repeat
+```
+
+---
+
+# 26. Random Number Generation
+
+Digital p-bits require randomness.
+
+Possible generators:
+
+* LFSRs
+* Xorshift
+* ChaCha PRNG
+* Hardware RNG
+
+Unlike a real TSU,
+
+the FPGA computes randomness digitally.
+
+---
+
+# 27. Different Probabilistic Bit Designs
+
+Possible implementations include:
+
+* PBIT
+* PDIT
+* PMODE
+* PMOG
+
+Each represents different probabilistic hardware models and trade-offs for implementing stochastic behavior.
+
+---
+
+# 28. FPGA Development Flow
+
+Research usually follows:
+
+Algorithm
+
+↓
+
+Python / JAX
+
+↓
+
+RTL
+
+↓
+
+Verilog
+
+↓
+
+FPGA Prototype
+
+↓
+
+Verification
+
+↓
+
+ASIC
+
+↓
+
+Thermodynamic ASIC
+
+The FPGA validates the architecture before fabricating custom silicon.
+
+---
+
+# 29. Open Source Research
+
+An open-source TSU ecosystem could include:
+
+* Verilog implementations
+* CMOS models
+* FPGA prototypes
+* Digital p-bits
+* Graph-colored block Gibbs sampling
+* Energy-Based Models
+* Compiler that maps probabilistic graphs directly onto FPGA routing
+
+This enables experimentation before moving to analog ASICs.
+
+---
+
+# 30. Drivers, Data Representation, and Protocols
+
+Classical computers exchange deterministic bytes and characters.
+
+Future probabilistic accelerators may expose lower-level abstractions such as stochastic state vectors, graph chunks, or sampling tasks instead of character-oriented interfaces.
+
+Possible software layers include:
+
+* Device drivers
+* Probabilistic memory management
+* Chunk-based communication
+* Sampling protocols
+* Graph scheduling
+* Accelerator runtimes
+
+Unlike today's operating systems, these systems may focus on orchestrating probabilistic computation rather than deterministic instruction execution.
+
+---
+
+# 31. Future Research Questions
+
+Can probabilistic hardware accelerate Large Language Models?
+
+Can analog sampling outperform GPUs?
+
+Can new communication protocols reduce data movement?
+
+Can FPGA prototypes evolve into custom ASICs?
+
+Can thermodynamic hardware become another AI accelerator alongside GPUs?
+
+---
+
+# 32. Conclusion
+
+Computing is no longer limited to deterministic logic.
+
+Three complementary paradigms are emerging:
+
+* Classical computing for exact arithmetic.
+* Quantum computing for algorithms that exploit quantum mechanics.
+* Thermodynamic computing for probabilistic optimization and sampling.
+
+Noise, once considered the enemy of computation, may become a computational resource.
+
+An FPGA cannot reproduce the analog physics of a thermodynamic processor, but it is an excellent platform for building digital p-bits, validating stochastic architectures, experimenting with Gibbs sampling, and developing the algorithms that could eventually power future thermodynamic ASICs.

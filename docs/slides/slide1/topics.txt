@@ -1,7 +1,3 @@
-https://chatgpt.com/share/6a6a5fc4-c5e8-83e9-8120-504b5f5467ec
-https://claude.ai/share/7b096d0e-261e-467b-8c61-46dca6c739e6
-https://postquantum.com/building-quantum-computers/quantum-hpc-integration-nvqlink/
-https://everydaysworld9980.medium.com/quantum-computing-systems-design-components-and-capabilities-b3fb3b4722cc
 
 Why noise, how to is avoided?
 why important?
@@ -13,6 +9,12 @@ drivers
 - chunks
 protocols
 thermodinamic and noise? how to handle that noise
+
+ probabilistics bits, gradient desent ,gibbs sambling move make paths
+
+ there will not a OS for quantum computers or termal computer, the drivers for this will be for chunks, not  chatracters the protocol how they transmit information,
+
+ Deepseek make it more cheap by optimazing the protocol of tras
 
 
 If there is too little noise(low temperature):
@@ -35,8 +37,19 @@ an FPGA.
 | Build a real transistor-noise thermodynamic computer | ❌ No   |
 | Get the same energy efficiency as Extropic           | ❌ No   |
 
+Module	Classical	Quantum	Thermodynamic
+API	✅	❌	❌
+Tokenizer	✅	❌	❌
+Embeddings	✅	⚠️ Quantum embeddings	⚠️ Analog embeddings
+Vector Search	✅	✅ Quantum nearest neighbor	✅ Associative memories
+Attention	✅ GPU	⚠️ Experimental	✅ Stochastic optimization
+Matrix Multiplication	✅ GPU/TPU	⚠️ HHL-like algorithms	✅ Analog crossbars
+Feed Forward Layers	✅	⚠️	✅ Analog MAC arrays
+Sampling	✅	✅ Quantum sampling	✅ Boltzmann sampling
+Routing (MoE)	✅	⚠️ QAOA	✅ Gibbs sampling
+Training	✅	⚠️ Quantum optimization	✅ Energy-based optimization
 
-
+(Randomization ways)
 LFSRs
 Xorshift
 ChaCha PRNG
@@ -67,5 +80,413 @@ diferent ways to make a probabilistic bit
 hardware detras de quantum and termodinamic compters
 
 cmos
-verilog
+verilog for model 
+
+
+NVQLink: the Western HPC-quantum interconnect
+QRMI: making QPUs schedulable like GPUs
+CUDA-Q: the programming model
+The QEC decoder path
+Reference deployments
+
+**1. El Servidor Clásico de Control**
+
+* **Función:** Ejecuta el sistema operativo y el software de control cuántico.
+* **Físico:** Servidores comerciales de alto rendimiento (CPUs/GPUs) ubicados en el mismo centro de datos que la QPU para reducir la latencia de red.
+
+**2. Electrónica de Control (El Traductor)**
+
+* **Función:** Transforma los unos y ceros digitales en ondas físicas que los qubits puedan entender.
+* **Físico:** Chasis que contiene **FPGAs** (Field Programmable Gate Arrays), **DACs** (Convertidores Digital-Analógico de velocidad ultraalta) y **ADCs** (Convertidores Analógico-Digital).
+* **Operación:** Si el código clásico dice "aplica una compuerta de rotación en el Qubit 1", la FPGA calcula la forma de onda exacta y el DAC la genera como un pulso físico.
+
+**3. Líneas de Transmisión (El Medio)**
+
+* **Función:** Transportan las señales físicas hacia el interior del criostato sin introducir calor ni ruido.
+* **Físico:** Cables coaxiales de alta fidelidad, atenuadores criogénicos y guías de onda que bajan por las distintas etapas de temperatura del refrigerador.
+
+**4. El Procesador Cuántico (QPU)**
+
+* **Función:** Recibe los pulsos, altera el estado de los qubits y permite la medición.
+* **Físico:** Un chip de silicio o zafiro con circuitos superconductores (en tecnologías como IBM o Google) o trampas de átomos/iones (como IonQ).
+
+
+
+SO i can build a thermodinamic computer on a fpga? or how ?  Yes or not?
+
+Short answer: No—not in the sense of building a true thermodynamic computer like Extropic's TSU on an FPGA.
+
+However, yes, you can build a digital emulator/prototype of a thermodynamic computer on an FPGA.
+
+Here's the distinction:
+
+Can you do this on an FPGA?	Yes/No
+Simulate Gibbs sampling	✅ Yes
+Implement Energy-Based Models (EBMs)	✅ Yes
+Build pbits digitally using PRNGs	✅ Yes
+Prototype the architecture of a TSU	✅ Yes
+Build a real transistor-noise thermodynamic computer	❌ No
+Get the same energy efficiency as Extropic	❌ No
+Why not?
+
+An FPGA is deterministic digital logic.
+
+Extropic's hardware is fundamentally different.
+
+Their TSUs rely on physical analog noise inside transistors. A pbit is not just a random number generator—it is a circuit whose output naturally fluctuates because of transistor physics.
+
+That physical randomness is what makes it extremely energy efficient.
+
+An FPGA cannot reproduce that because every LUT and flip-flop is deterministic.
+
+What can you build?
+
+Actually, quite a lot.
+
+For example:
+
++----------------------------+
+| FPGA                       |
+|                            |
+|  PRNG                      |
+|      ↓                     |
+|  Digital pbit              |
+|      ↓                     |
+| Gibbs Update Engine        |
+|      ↓                     |
+| Local Memory               |
+|      ↓                     |
+| Neighbor Communication     |
+|      ↓                     |
+| Repeat                     |
++----------------------------+
+
+This behaves algorithmically like a TSU.
+
+Instead of using transistor noise, you use:
+
+LFSRs
+Xorshift
+ChaCha PRNG
+Hardware RNG (if available)
+
+to generate the random bits.
+
+What would be missing?
+
+Extropic's chip contains probabilistic circuits that directly implement probability distributions such as Bernoulli, Gaussian, categorical, and Gaussian mixtures in hardware rather than computing them digitally.
+
+On an FPGA you would instead do
+
+random_number
+      ↓
+compare with probability
+      ↓
+output 0 or 1
+
+instead of
+
+analog transistor
+      ↓
+naturally fluctuates
+      ↓
+output 0 or 1
+
+The mathematical result is similar, but the implementation and energy consumption are very different.
+
+Could you build an "open-source TSU" on an FPGA?
+
+Yes.
+
+In fact, this would be an excellent research project.
+
+You could implement:
+
+Thousands of digital pbits
+Graph-colored block Gibbs sampling
+Energy-Based Models
+Boltzmann Machines
+Ising models
+Denoising Thermodynamic Models (DTMs)
+A compiler that maps a graph directly to FPGA routing
+
+The architecture would resemble what Extropic describes: many sampling cells communicating locally and repeatedly performing Gibbs updates.
+
+Could it later become an ASIC?
+
+Yes, and this is the typical hardware development path:
+
+Algorithm
+      ↓
+Python (JAX)
+      ↓
+FPGA prototype
+      ↓
+RTL verification
+      ↓
+ASIC
+      ↓
+Thermodynamic ASIC
+
+The FPGA is a way to validate the architecture and algorithms. Once they work, you could replace the digital pbits with true analog probabilistic circuits in a custom chip.
+
+Since you have a Tang Nano 9K
+
+Your Tang Nano 9K is powerful enough to prototype a small thermodynamic computing system, for example:
+
+256–2048 digital pbits
+Parallel Gibbs sampling engine
+Small Ising models
+Hopfield networks
+Boltzmann machines
+Energy-based optimization demos
+
+It won't match Extropic's hardware in energy efficiency, but it can let you explore the same computational principles and develop the algorithms before moving to a custom ASIC.
+
+why the noise mean, why is important? why a normal computer doesnt have it?
+
+
+This is actually the key idea behind thermodynamic computing.
+
+A normal computer tries to eliminate noise.
+
+A thermodynamic computer tries to use noise as the computation itself.
+
+What is "noise"?
+
+Imagine you balance a pencil on its tip.
+
+     |
+     |
+     ▲
+
+Even if you don't touch it, tiny things happen:
+
+atoms vibrate
+electrons move
+heat from the room
+quantum effects
+electrical fluctuations
+
+Eventually the pencil falls.
+
+Those tiny unpredictable movements are noise.
+
+Every electronic circuit has noise.
+
+Normal computers hate noise
+
+Suppose you store a binary value:
+
+5 volts = 1
+
+0 volts = 0
+
+If noise changes the voltage
+
+5.00V
+
+↓
+
+4.95V
+
+↓
+
+5.02V
+
+the computer still reads
+
+1
+
+But if the noise becomes too large
+
+5V
+
+↓
+
+2.4V
+
+the computer may accidentally read
+
+0
+
+That's an error.
+
+So CPUs spend enormous engineering effort making sure this never happens.
+
+They use
+
+large voltage margins
+error correction
+shielding
+clock synchronization
+deterministic logic
+
+The entire semiconductor industry is built around fighting noise.
+
+Extropic does the opposite
+
+Instead of saying
+
+"Noise is bad."
+
+they say
+
+"Noise already exists. Let's compute with it."
+
+Imagine a transistor that naturally fluctuates
+
+111111111111111
+
+↓
+
+111101111011111
+
+↓
+
+111111011111111
+
+Instead of forcing it to stay fixed,
+
+they measure those fluctuations.
+
+Those fluctuations become
+
+heads
+
+tails
+
+heads
+
+tails
+
+which is exactly what a probabilistic algorithm needs.
+
+Why is this useful?
+
+Many AI algorithms repeatedly do something like
+
+Generate random number.
+
+↓
+
+Compare.
+
+↓
+
+Accept?
+
+↓
+
+Reject?
+
+↓
+
+Repeat.
+
+A GPU does something like
+
+Millions of logic gates
+
+↓
+
+PRNG
+
+↓
+
+integer math
+
+↓
+
+floating point math
+
+↓
+
+comparison
+
+↓
+
+random bit
+
+A TSU instead lets the hardware itself produce random samples because its probabilistic circuits naturally fluctuate according to programmable probability distributions.
+
+So instead of computing randomness, it measures randomness.
+
+Think of flipping a coin
+Normal CPU
+Coin doesn't exist.
+
+↓
+
+Run algorithm
+
+↓
+
+Generate pseudo-random number
+
+↓
+
+Pretend to flip coin
+
+↓
+
+Result
+Thermodynamic computer
+Real noisy circuit
+
+↓
+
+Observe
+
+↓
+
+Coin flip happened naturally
+
+↓
+
+Done
+But why is this faster?
+
+Suppose an AI model needs
+
+10 trillion random samples
+
+A GPU has to compute every one.
+
+A thermodynamic computer gets those samples from physical noise that is already present in the device, so much less digital work is required for that part of the computation. This is one of the reasons Extropic argues their architecture can be dramatically more energy efficient for sampling-heavy workloads.
+
+Why don't CPUs already do this?
+
+Because CPUs are designed for exact arithmetic.
+
+If you ask
+
+2 + 2
+
+you always expect
+
+4
+
+never
+
+3
+
+4
+
+5
+
+Randomness would break almost every conventional program.
+
+However, AI and statistical algorithms often want randomness:
+
+Gibbs sampling
+Monte Carlo methods
+Diffusion models
+Boltzmann machines
+Bayesian inference
+Markov Chain Monte Carlo (MCMC)
+
+These algorithms are fundamentally based on drawing samples from probability distributions rather than producing one exact deterministic answer.
+
+This is why many researchers think thermodynamic computing could become a new kind of accelerator, much like GPUs became accelerators for matrix multiplication. CPUs remain best for deterministic computation, while thermodynamic hardware may excel at probabilistic computation where high-quality sampling is the main workload.
 
