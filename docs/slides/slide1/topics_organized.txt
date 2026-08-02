@@ -40,7 +40,7 @@ Although they appear different, all three manipulate information using different
 # 3. Classical Computing
 
 Everything inside a CPU or GPU is built from deterministic logic.
-
+ 
 The fundamental unit is the bit.
 
 ```

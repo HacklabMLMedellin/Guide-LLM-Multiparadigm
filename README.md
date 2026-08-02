@@ -117,12 +117,14 @@ Beyond the technical exploration, a goal of this project is to **learn by buildi
 | **Week 2** | Computer Science foundations behind **Quantum Computing** and **Thermal Computing** |
 | **Week 3** | Linear Algebra foundations |
 | **Week 4** | Probability foundations |
-| **Weeks 5–6** | Implement and study **nanoGPT** |
-| **Weeks 7–10** | Implement and study **GPT-2** |
-| **Weeks 10–15** | Build an industrial-scale language model |
-| **Weeks 15–20** | Implement **Quantum Language Models** |
-| **Weeks 20–25** | Implement **Thermal Language Models** |
-| **Weeks 25–30** | Integrate and combine **classical**, **quantum**, and **thermal** computing principles into a hybrid language model |
+| **Week 5** | Digital Signal processing |
+| **Weeks 6–7** | Implement and study **nanoGPT** |
+| **Weeks 8–12** | Implement and study **GPT-2** |
+| **Weeks 12–18** | Build an industrial-scale language model |
+| **Weeks 18–25** | LLM based on diffusion |
+| **Weeks 25–30** | Implement **Quantum Language Models** |
+| **Weeks 30–35** | Implement **Thermal Language Models** |
+| **Weeks 35–40** | Integrate and combine **classical**, **quantum**, and **thermal** computing principles into a hybrid language model |
 
 
 # Resources
