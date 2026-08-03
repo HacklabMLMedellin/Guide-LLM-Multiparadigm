@@ -1,23 +1,3 @@
-"""
-New Computing Architectures — manim-slides Presentation
-========================================================
-
-All 37 slides, reordered by topic:
-
-  SECTION 1 — OVERVIEW          (slides 01–04)
-  SECTION 2 — CLASSICAL         (slides 05–10)
-  SECTION 3 — THERMODYNAMIC     (slides 11–23)
-  SECTION 4 — QUANTUM           (slides 24–27)
-  SECTION 5 — COMPARISONS       (slides 28–29)
-  SECTION 6 — HARDWARE & IMPL.  (slides 30–33)
-  SECTION 7 — AI DRIVERS        (slides 34–35)
-  SECTION 8 — CONCLUSION        (slides 36–37)
-
-Render / present:
-    manim -qh computing_architectures.py ComputingArchitecturesPresentation
-    manim-slides present ComputingArchitecturesPresentation
-"""
-
 import textwrap, math
 import numpy as np
 from manim import *

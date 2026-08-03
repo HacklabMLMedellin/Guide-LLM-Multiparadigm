@@ -53,28 +53,35 @@ Thermodynamic computing (via energy-based models and Gibbs/Boltzmann-style sampl
 The project follows an incremental, "build it to understand it" workflow, moving from a minimal classical baseline to two experimental branches:
 
 ```
+
 Foundations
-├── Probability & Statistics
-├── Linear Algebra
-└── Computer Science Fundamentals 
+├── (Week 4) Probability & Statistics
+├── (Week 3) Linear Algebra
+├── (Week 2) Computer Science foundations behind Quantum Computing and Thermal Computing
+├── (Week 5) Digital Signal processing
+└── (Week 6) Photonic Computing
 
-1. nanoGPT (Andrej Karpathy)      →  minimal, from-scratch GPT
-2. GPT-2                          →  intermediate-scale classical LLM
-3. CS336 – Stanford               →  advanced, full training/systems pipeline
-                                        |
-                    ┌───────────────────┴───────────────────┐
-                    │                                       │
-        Quantum LLM Module                     Thermodynamic LLM Module
-        (built with PennyLane)                 (built with THRML)
+    (Weeks 7–8) nanoGPT (Andrej Karpathy)   →  minimal, from-scratch GPT
 
-                    └───────────────────┬───────────────────┘
-                                        │
-                                        │
-                                        │
-                           Hybrid Adaptive LLM
-        (combines Classical, Quantum, and Thermodynamic modules,
-         dynamically selecting or combining them whenever each
-         paradigm is best suited for the computation.)
+    (Weeks 9–13) GPT-2                   →  intermediate-scale classical LLM
+
+    (Weeks 13–18) CS336 – Stanford        →  Build an industrial-scale language model
+
+                                     |
+                 ┌───────────────────┴───────────────────┬───────────────────┐
+                 │                                       │                   |
+     (Weeks 25–30)                           (Weeks 30–35)             (Weeks 35–40)
+     Quantum LLM Module                Thermodynamic LLM Module     Photonic LLM Module
+     (built with PennyLane)            (built with THRML)
+
+                 └───────────────────┬───────────────────┴───────────────────┘
+                                     │
+                                     │
+                                     │
+                             (Weeks 40–50) 
+                             Hybrid Adaptive LLM
+     (Integrate and combine classical, quantum, and thermal computing principles into a hybrid language model,
+      dynamically selecting or combining them whenever each paradigm is best suited for the computation.)
 ```
 
 | Stage | Reference | What it teaches |
@@ -115,16 +122,18 @@ Beyond the technical exploration, a goal of this project is to **learn by buildi
 |----------|-------|
 | **Week 1** | Project planning and roadmap |
 | **Week 2** | Computer Science foundations behind **Quantum Computing** and **Thermal Computing** |
-| **Week 3** | Linear Algebra foundations |
-| **Week 4** | Probability foundations |
 | **Week 5** | Digital Signal processing |
-| **Weeks 6–7** | Implement and study **nanoGPT** |
-| **Weeks 8–12** | Implement and study **GPT-2** |
-| **Weeks 12–18** | Build an industrial-scale language model |
+| **Week 4** | Probability foundations |
+| **Week 3** | Linear Algebra foundations |
+| **Week 6** | Photonic Computing |
+| **Weeks 7–8** | Implement and study **nanoGPT** |
+| **Weeks 9–13** | Implement and study **GPT-2** |
+| **Weeks 13–18** | Build an industrial-scale language model |
 | **Weeks 18–25** | LLM based on diffusion |
 | **Weeks 25–30** | Implement **Quantum Language Models** |
 | **Weeks 30–35** | Implement **Thermal Language Models** |
-| **Weeks 35–40** | Integrate and combine **classical**, **quantum**, and **thermal** computing principles into a hybrid language model |
+| **Weeks 35–40** | Implement **Photonic Language Models** |
+| **Weeks 40–50** | Integrate and combine **classical**, **quantum**, and **thermal** computing principles into a hybrid language model |
 
 
 # Resources

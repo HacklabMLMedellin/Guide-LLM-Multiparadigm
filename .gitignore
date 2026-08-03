@@ -216,3 +216,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+docs/slides/slide1/media/
+docs/slides/slide1/slides/
