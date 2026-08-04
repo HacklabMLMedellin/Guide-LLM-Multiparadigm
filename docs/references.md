@@ -7,3 +7,5 @@
 (Why quantum computers could be great for machine learning after all)[https://pennylane.ai/blog/2026/03/quantum-computing-useful-for-machine-learning/]
 (normalcomputing)[https://normalcomputing.com/]
 (Digital siganal processing)[https://www.coursera.org/programs/sobma/specializations/digital-signal-processing?authProvider=bancolombia]
+(disfussion LLM)[https://github.com/ML-GSAI/LLaDA]
+(Oxen.ai: "How to Train Diffusion for Text from Scratch" (SEDD))[https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/]
