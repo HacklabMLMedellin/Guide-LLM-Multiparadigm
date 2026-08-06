@@ -122,12 +122,13 @@ Beyond the technical exploration, a goal of this project is to **learn by buildi
 |----------|-------|
 | **Week 1** | Project planning and roadmap |
 | **Week 2** | Computer Science foundations behind **Quantum Computing** and **Thermal Computing** |
-| **Week 5** | Digital Signal processing |
+| **Week 3** | Digital Signal processing |
 | **Week 4** | Probability foundations |
-| **Week 3** | Linear Algebra foundations |
+| **Week 5** | Linear Algebra foundations |
 | **Week 6** | Photonic Computing |
-| **Weeks 7–8** | Implement and study **nanoGPT** |
-| **Weeks 9–13** | Implement and study **GPT-2** |
+| **Weeks 7** | Implement and study **nanoGPT** |
+| **Weeks 8–10** | Implement and study **GPT-2** |
+| **Weeks 10–13** | improve **GPT-2**  |
 | **Weeks 13–18** | Build an industrial-scale language model |
 | **Weeks 18–25** | LLM based on diffusion |
 | **Weeks 25–30** | Implement **Quantum Language Models** |
