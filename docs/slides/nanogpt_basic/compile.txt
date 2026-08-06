@@ -1,0 +1,3 @@
+pip install manim manim-slides PyQt6
+manim-slides render -ql slide1.py NanoGPTPresentation
+manim-slides present NanoGPTPresentation

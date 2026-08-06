@@ -1,0 +1,9 @@
+pip install datasets
+python -c "
+from datasets import load_dataset
+ds = load_dataset('roneneldan/TinyStories', split='train')
+with open('tinystories.txt', 'w') as f:
+    for row in ds:
+        f.write(row['text'] + '\n\n')
+print('Done')
+"
