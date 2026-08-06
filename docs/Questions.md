@@ -27,4 +27,16 @@ Trists
 biological
 
 
-Diference between Photonic Computing, Quantum Photonic Computing and Quantum Computing
+Diference between Photonic Computing, Quantum Photonic Computing and Quantum Computing?
+
+| Feature             | Photonic Computing                              | Quantum Photonic Computing               | Quantum Computing                                            |
+| ------------------- | ----------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------ |
+| Information carrier | Classical light (photons)                       | Quantum states of photons                | Qubits (superconductors, trapped ions, photons, atoms, etc.) |
+| Physics             | Classical electromagnetism                      | Quantum mechanics                        | Quantum mechanics                                            |
+| Uses superposition? | ❌ No                                            | ✅ Yes                                    | ✅ Yes                                                        |
+| Uses entanglement?  | ❌ No                                            | ✅ Yes                                    | ✅ Yes                                                        |
+| Uses interference   | Classical optical interference                  | Quantum interference                     | Quantum interference                                         |
+| Error correction    | Similar to classical computers                  | Extremely difficult                      | Extremely difficult                                          |
+| Goal                | Faster and more efficient classical computation | Universal quantum computer using photons | Universal quantum computer using any qubit technology        |
+	
+
