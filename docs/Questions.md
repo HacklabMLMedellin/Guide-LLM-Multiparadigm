@@ -16,13 +16,15 @@ Thermic
 
 	thrml
 
-Photonic
+Photonic for ONN (optic neural network)
 
 	Photontorch
 	Simphony (integrated photonic circuits)
 
 Trists
 
+
+biological
 
 
 Diference between Photonic Computing, Quantum Photonic Computing and Quantum Computing

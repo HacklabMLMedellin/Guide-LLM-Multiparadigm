@@ -120,3 +120,10 @@ print(
         ].tolist()
     )
 )
+prompt = "hello"
+
+context = torch.tensor([encode(prompt)], dtype=torch.long)
+
+output = m.generate(idx=context, max_new_tokens=200)
+
+print(decode(output[0].tolist()))

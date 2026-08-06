@@ -9,3 +9,5 @@
 (Digital siganal processing)[https://www.coursera.org/programs/sobma/specializations/digital-signal-processing?authProvider=bancolombia]
 (disfussion LLM)[https://github.com/ML-GSAI/LLaDA]
 (Oxen.ai: "How to Train Diffusion for Text from Scratch" (SEDD))[https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/]
+(llm from scratch)[https://github.com/rasbt/LLMs-from-scratch]
+(make llama 3)[https://pub.towardsai.net/build-your-own-llama-3-architecture-from-scratch-using-pytorch-2ce1ecaa901c]
