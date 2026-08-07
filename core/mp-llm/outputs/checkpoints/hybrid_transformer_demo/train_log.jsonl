@@ -1,0 +1,17 @@
+{"event": "train_step", "step": 1, "loss": 3.6432, "perplexity": 38.21388, "accuracy": 0.01389, "execution_time_s": 0.86463, "timestamp": 1786057053.8739011, "gpu_usage_mb": 0.0, "ram_usage_mb": 986.27734375}
+{"event": "train_step", "step": 2, "loss": 3.51901, "perplexity": 33.75106, "accuracy": 0.01389, "execution_time_s": 0.87976, "timestamp": 1786057054.7585878, "gpu_usage_mb": 0.0, "ram_usage_mb": 987.52734375}
+{"event": "train_step", "step": 3, "loss": 3.50336, "perplexity": 33.22688, "accuracy": 0.03472, "execution_time_s": 0.88836, "timestamp": 1786057055.6499276, "gpu_usage_mb": 0.0, "ram_usage_mb": 988.02734375}
+{"event": "train_step", "step": 4, "loss": 3.47044, "perplexity": 32.15089, "accuracy": 0.03472, "execution_time_s": 0.90738, "timestamp": 1786057056.5620964, "gpu_usage_mb": 0.0, "ram_usage_mb": 988.65234375}
+{"event": "train_step", "step": 5, "loss": 3.46226, "perplexity": 31.88909, "accuracy": 0.05556, "execution_time_s": 0.91763, "timestamp": 1786057057.4837124, "gpu_usage_mb": 0.0, "ram_usage_mb": 988.65234375}
+{"event": "train_step", "step": 6, "loss": 3.3474, "perplexity": 28.42863, "accuracy": 0.03472, "execution_time_s": 1.04243, "timestamp": 1786057058.5306723, "gpu_usage_mb": 0.0, "ram_usage_mb": 988.65234375}
+{"event": "train_step", "step": 7, "loss": 3.39823, "perplexity": 29.91103, "accuracy": 0.04167, "execution_time_s": 0.96474, "timestamp": 1786057059.4995394, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.02734375}
+{"event": "train_step", "step": 8, "loss": 3.41105, "perplexity": 30.29701, "accuracy": 0.06944, "execution_time_s": 1.00813, "timestamp": 1786057060.5120647, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.02734375}
+{"event": "train_step", "step": 9, "loss": 3.27382, "perplexity": 26.41213, "accuracy": 0.06944, "execution_time_s": 0.91168, "timestamp": 1786057061.4292111, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.27734375}
+{"event": "train_step", "step": 10, "loss": 3.14448, "perplexity": 23.20754, "accuracy": 0.09722, "execution_time_s": 1.00866, "timestamp": 1786057062.4423108, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.27734375}
+{"event": "train_step", "step": 11, "loss": 3.19265, "perplexity": 24.35276, "accuracy": 0.10417, "execution_time_s": 0.90918, "timestamp": 1786057063.3556733, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.27734375}
+{"event": "train_step", "step": 12, "loss": 3.2173, "perplexity": 24.96072, "accuracy": 0.09028, "execution_time_s": 0.89566, "timestamp": 1786057064.2555664, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.40234375}
+{"event": "train_step", "step": 13, "loss": 3.13158, "perplexity": 22.91012, "accuracy": 0.11111, "execution_time_s": 0.95021, "timestamp": 1786057065.210148, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.65234375}
+{"event": "train_step", "step": 14, "loss": 3.21001, "perplexity": 24.77938, "accuracy": 0.07639, "execution_time_s": 0.98559, "timestamp": 1786057066.199808, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.65234375}
+{"event": "train_step", "step": 15, "loss": 3.17105, "perplexity": 23.83247, "accuracy": 0.11111, "execution_time_s": 0.91239, "timestamp": 1786057067.1169107, "gpu_usage_mb": 0.0, "ram_usage_mb": 989.77734375}
+{"event": "message", "message": "evaluate: {'eval_loss': 3.1621857484181723, 'eval_accuracy': 0.08333333333333333}", "timestamp": 1786057069.6810055, "gpu_usage_mb": 0.0, "ram_usage_mb": 990.16796875}
+{"event": "benchmark_summary", "parameter_count": 11180, "run_dir": "outputs/checkpoints/hybrid_transformer_demo", "timestamp": 1786057069.7121153, "gpu_usage_mb": 0.0, "ram_usage_mb": 990.16796875}

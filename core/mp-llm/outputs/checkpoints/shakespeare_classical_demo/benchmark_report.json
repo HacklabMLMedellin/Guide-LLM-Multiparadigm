@@ -1,0 +1,147 @@
+{
+  "model_name": "ClassicalLLM",
+  "hardware_factors": {
+    "classical": 1.0,
+    "quantum": 0.08,
+    "photonic": 0.04,
+    "thermodynamic": 0.12
+  },
+  "timing_summary": {
+    "TransformerLM._run_embedding [classical]": {
+      "paradigm": "classical",
+      "calls": 153,
+      "simulated_seconds": 0.018609737999781828,
+      "estimated_hardware_seconds": 0.018609737999781828,
+      "speedup_vs_simulated": 1.0
+    },
+    "TransformerBlock._run_attn [classical]": {
+      "paradigm": "classical",
+      "calls": 459,
+      "simulated_seconds": 2.2144508240000107,
+      "estimated_hardware_seconds": 2.2144508240000107,
+      "speedup_vs_simulated": 1.0
+    },
+    "TransformerBlock._run_ffn [classical]": {
+      "paradigm": "classical",
+      "calls": 459,
+      "simulated_seconds": 0.7258498959999997,
+      "estimated_hardware_seconds": 0.7258498959999997,
+      "speedup_vs_simulated": 1.0
+    }
+  },
+  "process_peak_memory_mb": 920.51171875,
+  "parameter_count": 108026,
+  "total_parameter_count": 108026,
+  "paradigm_selection": [
+    {
+      "component": "embedding",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "positional_encoding",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "output_projection",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "sampling",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "attention",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "feed_forward",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "attention",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "feed_forward",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "attention",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "feed_forward",
+      "paradigm": "classical",
+      "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+      "estimated_speedup": 1.0
+    }
+  ],
+  "train_metrics_final": {
+    "loss": 2.3961470127105713,
+    "perplexity": 10.980786323547363,
+    "accuracy": 0.2825520932674408,
+    "execution_time": 0.025430729999982304,
+    "step": 150,
+    "epoch": 0
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "model_name": "HybridLLM",
+  "hardware_factors": {
+    "classical": 1.0,
+    "quantum": 0.08,
+    "photonic": 0.04,
+    "thermodynamic": 0.12
+  },
+  "timing_summary": {
+    "TransformerLM._run_embedding [classical]": {
+      "paradigm": "classical",
+      "calls": 18,
+      "simulated_seconds": 0.0044298320000848435,
+      "estimated_hardware_seconds": 0.0044298320000848435,
+      "speedup_vs_simulated": 1.0
+    },
+    "TransformerBlock._run_attn [photonic]": {
+      "paradigm": "photonic",
+      "calls": 36,
+      "simulated_seconds": 14.540353477000195,
+      "estimated_hardware_seconds": 0.5816141390800078,
+      "speedup_vs_simulated": 25.0
+    },
+    "TransformerBlock._run_ffn [classical]": {
+      "paradigm": "classical",
+      "calls": 36,
+      "simulated_seconds": 0.013292235999955437,
+      "estimated_hardware_seconds": 0.013292235999955437,
+      "speedup_vs_simulated": 1.0
+    }
+  },
+  "process_peak_memory_mb": 990.16796875,
+  "parameter_count": 11180,
+  "total_parameter_count": 11180,
+  "paradigm_selection": [
+    {
+      "component": "embedding",
+      "paradigm": "classical",
+      "reason": "Embedding lookup is a simple indexed memory read; there is no linear-algebra or sampling advantage another paradigm could offer here, so classical dense storage is strictly the cheapest option.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "positional_encoding",
+      "paradigm": "classical",
+      "reason": "A fixed or learned per-position vector; a static lookup, not a computation worth specializing.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "output_projection",
+      "paradigm": "classical",
+      "reason": "A single large dense projection to vocabulary size; classical GEMM is the practical choice at any real vocabulary size.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "sampling",
+      "paradigm": "thermodynamic",
+      "reason": "Energy-based probabilistic sampling naturally maps to thermodynamic optimization: converting logits into biases on an Ising model and letting the system settle reframes 'sample a token' as 'find a low-energy state', the native operation of thermodynamic hardware.",
+      "estimated_speedup": 8.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "attention",
+      "paradigm": "photonic",
+      "reason": "Large matrix multiplications dominate this layer. Photonic interference can theoretically accelerate the linear-algebra portion of attention (the Q/K/V and output projections) once real photonic hardware exists, at the cost of today's simulation overhead.",
+      "estimated_speedup": 23.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "feed_forward",
+      "paradigm": "classical",
+      "reason": "Dense two-layer MLP; the standard, always-available choice.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "attention",
+      "paradigm": "photonic",
+      "reason": "Large matrix multiplications dominate this layer. Photonic interference can theoretically accelerate the linear-algebra portion of attention (the Q/K/V and output projections) once real photonic hardware exists, at the cost of today's simulation overhead.",
+      "estimated_speedup": 23.0
+    },
+    {
+      "component": "layer_norm",
+      "paradigm": "classical",
+      "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+      "estimated_speedup": 1.0
+    },
+    {
+      "component": "feed_forward",
+      "paradigm": "classical",
+      "reason": "Dense two-layer MLP; the standard, always-available choice.",
+      "estimated_speedup": 1.0
+    }
+  ],
+  "train_metrics_final": {
+    "loss": 3.171048879623413,
+    "perplexity": 23.832468032836914,
+    "accuracy": 0.1111111119389534,
+    "execution_time": 0.9123945389999903,
+    "step": 15,
+    "epoch": 0
+  }
+}

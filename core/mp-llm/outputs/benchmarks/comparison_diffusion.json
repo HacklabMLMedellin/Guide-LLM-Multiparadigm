@@ -1,0 +1,490 @@
+{
+  "model_kind": "diffusion",
+  "variants": {
+    "ClassicalLLM": {
+      "model_name": "ClassicalLLM",
+      "hardware_factors": {
+        "classical": 1.0,
+        "quantum": 0.08,
+        "photonic": 0.04,
+        "thermodynamic": 0.12
+      },
+      "timing_summary": {
+        "DiffusionLM._run_embedding [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.00023851800000329604,
+          "estimated_hardware_seconds": 0.00023851800000329604,
+          "speedup_vs_simulated": 1.0
+        },
+        "TransformerBlock._run_attn [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.0013738069999646996,
+          "estimated_hardware_seconds": 0.0013738069999646996,
+          "speedup_vs_simulated": 1.0
+        },
+        "TransformerBlock._run_ffn [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.0009554199999968205,
+          "estimated_hardware_seconds": 0.0009554199999968205,
+          "speedup_vs_simulated": 1.0
+        }
+      },
+      "process_peak_memory_mb": 904.69140625,
+      "parameter_count": 3343,
+      "total_parameter_count": 3343,
+      "paradigm_selection": [
+        {
+          "component": "embedding",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "positional_encoding",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "output_projection",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "sampling",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "probability_estimation",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "attention",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "feed_forward",
+          "paradigm": "classical",
+          "reason": "AllClassicalPolicy: every component forced classical for a fast, fully-differentiable baseline run.",
+          "estimated_speedup": 1.0
+        }
+      ]
+    },
+    "QuantumLLM": {
+      "model_name": "QuantumLLM",
+      "hardware_factors": {
+        "classical": 1.0,
+        "quantum": 0.08,
+        "photonic": 0.04,
+        "thermodynamic": 0.12
+      },
+      "timing_summary": {
+        "DiffusionLM._run_embedding [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 9.297300002231168e-05,
+          "estimated_hardware_seconds": 9.297300002231168e-05,
+          "speedup_vs_simulated": 1.0
+        },
+        "TransformerBlock._run_attn [quantum]": {
+          "paradigm": "quantum",
+          "calls": 2,
+          "simulated_seconds": 0.024279049999989866,
+          "estimated_hardware_seconds": 0.0019423239999991893,
+          "speedup_vs_simulated": 12.5
+        },
+        "TransformerBlock._run_ffn [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.0003602199999761524,
+          "estimated_hardware_seconds": 0.0003602199999761524,
+          "speedup_vs_simulated": 1.0
+        }
+      },
+      "process_peak_memory_mb": 906.86328125,
+      "parameter_count": 3511,
+      "total_parameter_count": 3511,
+      "paradigm_selection": [
+        {
+          "component": "embedding",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(quantum): requested for every component to build a single-paradigm model. [Fallback: quantum has no implementation for embedding in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "positional_encoding",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(quantum): requested for every component to build a single-paradigm model. [Fallback: quantum has no implementation for positional_encoding in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(quantum): requested for every component to build a single-paradigm model. [Fallback: quantum has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "output_projection",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(quantum): requested for every component to build a single-paradigm model. [Fallback: quantum has no implementation for output_projection in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "sampling",
+          "paradigm": "quantum",
+          "reason": "Uses genuine quantum-measurement randomness to drive the same inverse-CDF sampling procedure, rather than a classical PRNG.",
+          "estimated_speedup": 3.0
+        },
+        {
+          "component": "probability_estimation",
+          "paradigm": "quantum",
+          "reason": "Measurement statistics of a parameterized circuit are themselves genuine Born-rule probabilities, which is a more direct match for 'estimate a probability' than an arbitrary classical nonlinearity.",
+          "estimated_speedup": 3.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(quantum): requested for every component to build a single-paradigm model. [Fallback: quantum has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "attention",
+          "paradigm": "quantum",
+          "reason": "A small variational circuit can act as a learned, non-classical gating function over attention output, exploiting the circuit's expressivity per parameter -- explored here as a research variant rather than a speed optimization.",
+          "estimated_speedup": 3.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(quantum): requested for every component to build a single-paradigm model. [Fallback: quantum has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "feed_forward",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(quantum): requested for every component to build a single-paradigm model. [Fallback: quantum has no implementation for feed_forward in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        }
+      ]
+    },
+    "PhotonicLLM": {
+      "model_name": "PhotonicLLM",
+      "hardware_factors": {
+        "classical": 1.0,
+        "quantum": 0.08,
+        "photonic": 0.04,
+        "thermodynamic": 0.12
+      },
+      "timing_summary": {
+        "DiffusionLM._run_embedding [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.00012149899998803448,
+          "estimated_hardware_seconds": 0.00012149899998803448,
+          "speedup_vs_simulated": 1.0
+        },
+        "TransformerBlock._run_attn [photonic]": {
+          "paradigm": "photonic",
+          "calls": 2,
+          "simulated_seconds": 0.7061412429999905,
+          "estimated_hardware_seconds": 0.02824564971999962,
+          "speedup_vs_simulated": 25.0
+        },
+        "TransformerBlock._run_ffn [photonic]": {
+          "paradigm": "photonic",
+          "calls": 2,
+          "simulated_seconds": 0.18792404799998508,
+          "estimated_hardware_seconds": 0.007516961919999404,
+          "speedup_vs_simulated": 24.999999999999996
+        }
+      },
+      "process_peak_memory_mb": 922.94921875,
+      "parameter_count": 2537,
+      "total_parameter_count": 2537,
+      "paradigm_selection": [
+        {
+          "component": "embedding",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for embedding in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "positional_encoding",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for positional_encoding in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "output_projection",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for output_projection in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "sampling",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for sampling in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "probability_estimation",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for probability_estimation in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "attention",
+          "paradigm": "photonic",
+          "reason": "Large matrix multiplications dominate this layer. Photonic interference can theoretically accelerate the linear-algebra portion of attention (the Q/K/V and output projections) once real photonic hardware exists, at the cost of today's simulation overhead.",
+          "estimated_speedup": 23.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(photonic): requested for every component to build a single-paradigm model. [Fallback: photonic has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "feed_forward",
+          "paradigm": "photonic",
+          "reason": "The inner (dimension-preserving) transform is pure linear algebra and can, in principle, be realized optically the same way attention's projections can.",
+          "estimated_speedup": 23.0
+        }
+      ]
+    },
+    "ThermodynamicLLM": {
+      "model_name": "ThermodynamicLLM",
+      "hardware_factors": {
+        "classical": 1.0,
+        "quantum": 0.08,
+        "photonic": 0.04,
+        "thermodynamic": 0.12
+      },
+      "timing_summary": {
+        "DiffusionLM._run_embedding [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.00015627600001266728,
+          "estimated_hardware_seconds": 0.00015627600001266728,
+          "speedup_vs_simulated": 1.0
+        },
+        "TransformerBlock._run_attn [thermodynamic]": {
+          "paradigm": "thermodynamic",
+          "calls": 2,
+          "simulated_seconds": 3.096652973999994,
+          "estimated_hardware_seconds": 0.3715983568799993,
+          "speedup_vs_simulated": 8.333333333333332
+        },
+        "TransformerBlock._run_ffn [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.0005146559999786859,
+          "estimated_hardware_seconds": 0.0005146559999786859,
+          "speedup_vs_simulated": 1.0
+        }
+      },
+      "process_peak_memory_mb": 1066.55078125,
+      "parameter_count": 3343,
+      "total_parameter_count": 3343,
+      "paradigm_selection": [
+        {
+          "component": "embedding",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for embedding in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "positional_encoding",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for positional_encoding in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "output_projection",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for output_projection in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "sampling",
+          "paradigm": "thermodynamic",
+          "reason": "Energy-based probabilistic sampling naturally maps to thermodynamic optimization: converting logits into biases on an Ising model and letting the system settle reframes 'sample a token' as 'find a low-energy state', the native operation of thermodynamic hardware.",
+          "estimated_speedup": 8.0
+        },
+        {
+          "component": "probability_estimation",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for probability_estimation in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "attention",
+          "paradigm": "thermodynamic",
+          "reason": "Frames 'which keys matter' as an Ising model over key positions and samples a physically-motivated sparse attention pattern via Gibbs sampling, instead of dense deterministic softmax weighting -- a discrete selection problem, which is thermodynamic sampling's strength.",
+          "estimated_speedup": 8.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for layer_norm in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "feed_forward",
+          "paradigm": "classical",
+          "reason": "SingleParadigmPolicy(thermodynamic): requested for every component to build a single-paradigm model. [Fallback: thermodynamic has no implementation for feed_forward in this codebase; used classical instead.]",
+          "estimated_speedup": 1.0
+        }
+      ]
+    },
+    "HybridLLM": {
+      "model_name": "HybridLLM",
+      "hardware_factors": {
+        "classical": 1.0,
+        "quantum": 0.08,
+        "photonic": 0.04,
+        "thermodynamic": 0.12
+      },
+      "timing_summary": {
+        "DiffusionLM._run_embedding [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.00017782300000135365,
+          "estimated_hardware_seconds": 0.00017782300000135365,
+          "speedup_vs_simulated": 1.0
+        },
+        "TransformerBlock._run_attn [photonic]": {
+          "paradigm": "photonic",
+          "calls": 2,
+          "simulated_seconds": 0.6872107419999907,
+          "estimated_hardware_seconds": 0.027488429679999628,
+          "speedup_vs_simulated": 25.0
+        },
+        "TransformerBlock._run_ffn [classical]": {
+          "paradigm": "classical",
+          "calls": 2,
+          "simulated_seconds": 0.0005997829999841997,
+          "estimated_hardware_seconds": 0.0005997829999841997,
+          "speedup_vs_simulated": 1.0
+        }
+      },
+      "process_peak_memory_mb": 1066.92578125,
+      "parameter_count": 2463,
+      "total_parameter_count": 2463,
+      "paradigm_selection": [
+        {
+          "component": "embedding",
+          "paradigm": "classical",
+          "reason": "Embedding lookup is a simple indexed memory read; there is no linear-algebra or sampling advantage another paradigm could offer here, so classical dense storage is strictly the cheapest option.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "positional_encoding",
+          "paradigm": "classical",
+          "reason": "A fixed or learned per-position vector; a static lookup, not a computation worth specializing.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "output_projection",
+          "paradigm": "classical",
+          "reason": "A single large dense projection to vocabulary size; classical GEMM is the practical choice at any real vocabulary size.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "sampling",
+          "paradigm": "thermodynamic",
+          "reason": "Energy-based probabilistic sampling naturally maps to thermodynamic optimization: converting logits into biases on an Ising model and letting the system settle reframes 'sample a token' as 'find a low-energy state', the native operation of thermodynamic hardware.",
+          "estimated_speedup": 8.0
+        },
+        {
+          "component": "probability_estimation",
+          "paradigm": "quantum",
+          "reason": "Measurement statistics of a parameterized circuit are themselves genuine Born-rule probabilities, which is a more direct match for 'estimate a probability' than an arbitrary classical nonlinearity.",
+          "estimated_speedup": 3.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "attention",
+          "paradigm": "photonic",
+          "reason": "Large matrix multiplications dominate this layer. Photonic interference can theoretically accelerate the linear-algebra portion of attention (the Q/K/V and output projections) once real photonic hardware exists, at the cost of today's simulation overhead.",
+          "estimated_speedup": 23.0
+        },
+        {
+          "component": "layer_norm",
+          "paradigm": "classical",
+          "reason": "Elementwise normalization; a memory-bandwidth-bound op with no known paradigm-specific advantage.",
+          "estimated_speedup": 1.0
+        },
+        {
+          "component": "feed_forward",
+          "paradigm": "classical",
+          "reason": "Dense two-layer MLP; the standard, always-available choice.",
+          "estimated_speedup": 1.0
+        }
+      ]
+    }
+  }
+}
