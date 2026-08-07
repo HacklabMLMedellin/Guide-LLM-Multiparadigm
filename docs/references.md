@@ -13,3 +13,4 @@
 (make llama 3)[https://pub.towardsai.net/build-your-own-llama-3-architecture-from-scratch-using-pytorch-2ce1ecaa901c]
 (torx)[https://extropic-torx.readthedocs-hosted.com/en/latest/index.html]
 (languagemodelbuilder)[https://languagemodelbuilder.com/]
+(AI profitable)[https://www.seangoedecke.com/ai-inference-is-obviously-profitable/]
