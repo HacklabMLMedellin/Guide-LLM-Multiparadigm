@@ -142,7 +142,7 @@ pip install -r requirements.txt --break-system-packages
 # Train the true multi-paradigm Hybrid model on the built-in toy corpus
 python main.py train --llm hybrid --model transformer \
     --run-dir outputs/checkpoints/hybrid_run \
-    --d-model 32 --n-heads 4 --n-layers 2 --steps-per-epoch 20
+    --d-model 256 --n-heads 16 --n-layers 16 --steps-per-epoch 5000
 
 # Generate from it
 python main.py infer --llm hybrid --run-dir outputs/checkpoints/hybrid_run \

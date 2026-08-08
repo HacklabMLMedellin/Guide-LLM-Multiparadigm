@@ -38,7 +38,8 @@ Diference between Photonic Computing, Quantum Photonic Computing and Quantum Com
 | Uses interference   | Classical optical interference                  | Quantum interference                     | Quantum interference                                         |
 | Error correction    | Similar to classical computers                  | Extremely difficult                      | Extremely difficult                                          |
 | Goal                | Faster and more efficient classical computation | Universal quantum computer using photons | Universal quantum computer using any qubit technology        |
-	
+
+
 
 How many cost one of it?
 
