@@ -40,3 +40,49 @@ Diference between Photonic Computing, Quantum Photonic Computing and Quantum Com
 | Goal                | Faster and more efficient classical computation | Universal quantum computer using photons | Universal quantum computer using any qubit technology        |
 	
 
+How many cost one of it?
+
+Quantum
+
+	2 million dolar
+
+Thermic
+
+	price not avaible
+
+Photonic for ONN (optic neural network)
+
+	we estimate "€50,000" or "€100,000"  from QANT
+
+Foundation or a capitalist company?
+
+	We dont know
+
+models like chatgpt,claude,gemini:
+
+use a tool like airflow, databricks
+
+     Probably yes
+
+they use best practices in their code taking in mind the llm , model is the final model while the code is a "trash"
+
+	They use
+
+What they use as database? and why
+
+	Object storage like parquet
+
+how data is prepaed 
+
+	extraction
+	filtering
+	deduplication and quality processing
+	
+how data looks
+
+	{
+	  "text": "Photosynthesis is the process by which...",
+	  "source": "web",
+	  "language": "en",
+	  "quality": 0.94
+	}
