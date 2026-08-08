@@ -1,16 +1,16 @@
 # Resources
 
-(Foundation Models Beyond CMOS)[https://arxiv.org/pdf/1711.04295]
-(First Practical Experiences Integrating Quantum Computers with HPC Resources: A Case Study With a 20-qubit Superconducting Quantum Computer)[https://arxiv.org/abs/2509.12949]
-(Quantum LLMs Using Quantum Computing to Analyze and Process Semantic Information)[https://arxiv.org/html/2512.02619v1]
-(Quantum course)[https://quantum.cloud.ibm.com/learning/en/courses]
-(Why quantum computers could be great for machine learning after all)[https://pennylane.ai/blog/2026/03/quantum-computing-useful-for-machine-learning/]
-(normalcomputing)[https://normalcomputing.com/]
-(Digital siganal processing)[https://www.coursera.org/programs/sobma/specializations/digital-signal-processing?authProvider=bancolombia]
-(disfussion LLM)[https://github.com/ML-GSAI/LLaDA]
-(Oxen.ai: "How to Train Diffusion for Text from Scratch" (SEDD))[https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/]
-(llm from scratch)[https://github.com/rasbt/LLMs-from-scratch]
-(make llama 3)[https://pub.towardsai.net/build-your-own-llama-3-architecture-from-scratch-using-pytorch-2ce1ecaa901c]
-(torx)[https://extropic-torx.readthedocs-hosted.com/en/latest/index.html]
-(languagemodelbuilder)[https://languagemodelbuilder.com/]
-(AI profitable)[https://www.seangoedecke.com/ai-inference-is-obviously-profitable/]
+1. [Foundation Models Beyond CMOS](https://arxiv.org/pdf/1711.04295)
+2. [First Practical Experiences Integrating Quantum Computers with HPC Resources: A Case Study With a 20-qubit Superconducting Quantum Computer](https://arxiv.org/abs/2509.12949)
+3. [Quantum LLMs: Using Quantum Computing to Analyze and Process Semantic Information](https://arxiv.org/html/2512.02619v1)
+4. [IBM Quantum Learning — Quantum Course](https://quantum.cloud.ibm.com/learning/en/courses)
+5. [Why Quantum Computers Could Be Great for Machine Learning After All](https://pennylane.ai/blog/2026/03/quantum-computing-useful-for-machine-learning/)
+6. [Normal Computing](https://normalcomputing.com/)
+7. [Digital Signal Processing](https://www.coursera.org/programs/sobma/specializations/digital-signal-processing?authProvider=bancolombia)
+8. [LLaDA — Large Language Diffusion Models](https://github.com/ML-GSAI/LLaDA)
+9. [Oxen.ai — How to Train Diffusion for Text from Scratch (SEDD)](https://kuleshov-group.github.io/blog/blog/2026/how-to-build-a-diffusion-language-model/)
+10. [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)
+11. [Build Your Own Llama 3 Architecture from Scratch Using PyTorch](https://pub.towardsai.net/build-your-own-llama-3-architecture-from-scratch-using-pytorch-2ce1ecaa901c)
+12. [TorX — Extropic](https://extropic-torx.readthedocs-hosted.com/en/latest/index.html)
+13. [Language Model Builder](https://languagemodelbuilder.com/)
+14. [AI Inference Is Obviously Profitable](https://www.seangoedecke.com/ai-inference-is-obviously-profitable/)

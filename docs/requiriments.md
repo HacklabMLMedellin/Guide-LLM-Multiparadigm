@@ -1,5 +1,5 @@
-# Requiriments
+# Requirements
 
-function for timer another function 
-dashboard of training
-function for mesure parameters
+* Timer functionality
+* Training dashboard
+* Parameter measurement functionality
