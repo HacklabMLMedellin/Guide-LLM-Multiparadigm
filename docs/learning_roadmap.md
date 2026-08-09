@@ -1,3 +1,6 @@
+# Learning rood map
+Mark from 0 to 5 if you know
+
 | Category | Topic | jero98772 | Jero nacho | simon |
 | --- | --- | --- | --- | --- |
 | **ML foundations** | Diffusion | None | None | None |
@@ -13,7 +16,8 @@
 | **ML foundations** | Bayesian inference | None | None | None |
 | **ML foundations** | Markov Chain Monte Carlo | None | None | None |
 | **ML foundations** | Stochastic optimization | None | None | None |
-| **ML foundations** | Neural networks of 3 bits | None | None | None |
+| **ML foundations** | Neural networks of 3 values | None | None | None |
+| **ML foundations** | 1-Bit LLM:| None | None | None |
 | **Transformer internals** | Tokenizer | None | None | None |
 | **Transformer internals** | Vocabulary | None | None | None |
 | **Transformer internals** | Embeddings | None | None | None |
@@ -102,20 +106,19 @@
 | **Randomness & noise** | ChaCha PRNG | None | None | None |
 | **Randomness & noise** | Hardware RNG | None | None | None |
 | **Randomness & noise** | Quantum sampling | None | None | None |
-| **Randomness & noise** | Pdbit | None | None | None |
-| **Randomness & noise** | Noise in computers | None | None | None |
-| **Randomness & noise** | Real noisy circuit | None | None | None |
-| **Software, tools & patterns** | PennyLane | None | None | None |
-| **Software, tools & patterns** | Photontorch | None | None | None |
-| **Software, tools & patterns** | Thrml | None | None | None |
-| **Software, tools & patterns** | Strategy design pattern | None | None | None |
-| **Software, tools & patterns** | Pipeline design pattern | None | None | None |
-| **Software, tools & patterns** | Decorator (Python) | None | None | None |
+| **Randomness & noise** | Noise in computers | 1 | None | None |
+| **Randomness & noise** | Real noisy circuit | 1 | None | None |
+| **Software, tools & patterns** | PennyLane | 1 | None | None |
+| **Software, tools & patterns** | Photontorch | 1 | None | None |
+| **Software, tools & patterns** | Thrml | 1 | None | None |
+| **Software, tools & patterns** | Strategy design pattern | 3 | None | None |
+| **Software, tools & patterns** | Pipeline design pattern | 3 | None | None |
+| **Software, tools & patterns** | Decorator (Python) | 5 | None | None |
 | **Software, tools & patterns** | Parquet | None | None | None |
-| **Software, tools & patterns** | API | None | None | None |
+| **Software, tools & patterns** | API | 4 | None | None |
 | **Software, tools & patterns** | RTL verification | None | None | None |
-| **Software, tools & patterns** | Verilog | None | None | None |
-| **Software, tools & patterns** | CUDA | None | None | None |
+| **Software, tools & patterns** | Verilog | 2 | None | None |
+| **Software, tools & patterns** | CUDA | 1 | None | None |
 | **Software, tools & patterns** | CUDA-Q | None | None | None |
 | **Software, tools & patterns** | QRMI | None | None | None |
-| **Software, tools & patterns** | Protocols | None | None | None |
+| **Software, tools & patterns** | Protocols | 3 | None | None |
