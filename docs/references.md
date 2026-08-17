@@ -14,7 +14,7 @@
 12. [TorX — Extropic](https://extropic-torx.readthedocs-hosted.com/en/latest/index.html)
 13. [Language Model Builder](https://languagemodelbuilder.com/)
 14. [AI Inference Is Obviously Profitable](https://www.seangoedecke.com/ai-inference-is-obviously-profitable/)
-15. [Kimi k3 tutorial] (https://github.com/MoonshotAI/Kimi-K3/tree/main)
+15. [Kimi k3 tutorial](https://github.com/MoonshotAI/Kimi-K3/tree/main)
 16. [Gemini llm and quantum and why](https://share.gemini.google/nuva1xCYRsHF)
 17. [stabilizing_the_power_grid](https://www.reddit.com/r/Bitcoin/comments/w19i32/bitcoin_mining_and_stabilizing_the_power_grid_is/)
 18. [Photonic Mixture-of-Experts](https://www.nature.com/articles/s41467-026-73983-4?utm_source=chatgpt.com)
