@@ -1,5 +1,5 @@
-| Name       | Foundation Models Beyond CMOS | HPC + Quantum (20-qubit) | Quantum LLMs | IBM Quantum Course | PennyLane ML | Normal Computing | DSP Course | Diffusion LLM (LLaDA) | SEDD Tutorial | LLMs from Scratch | Build Llama 3 | Torx | Language Model Builder | AI profitable | Kimi k3 tutorial | Gemini llm and quantum and why
-|------------|:-----------------------------:|:------------------------:|:------------:|:------------------:|:------------:|:----------------:|:----------:|:---------------------:|:-------------:|:-----------------:|:--------------:|:----:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
-| jero98772  | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| Jero nacho | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| simon      | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Name       | Foundation Models Beyond CMOS | HPC + Quantum (20-qubit) | Quantum LLMs | IBM Quantum Course | PennyLane ML | Normal Computing | DSP Course | Diffusion LLM (LLaDA) | SEDD Tutorial | LLMs from Scratch | Build Llama 3 | Torx | Language Model Builder | AI profitable | Kimi k3 tutorial | Gemini llm and quantum and why | stabilizing thepower grid | Photonic Mixture-of-Experts | Quantum simulation of thermodynamics in an integrated quantum photonic processor | Hybrid Quantum Transformer for Language Generation 
+|------------|:-----------------------------:|:------------------------:|:------------:|:------------------:|:------------:|:----------------:|:----------:|:---------------------:|:-------------:|:-----------------:|:--------------:|:----:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
+| jero98772  | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Jero nacho | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| simon      | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |

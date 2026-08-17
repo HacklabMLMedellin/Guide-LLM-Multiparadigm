@@ -16,3 +16,7 @@
 14. [AI Inference Is Obviously Profitable](https://www.seangoedecke.com/ai-inference-is-obviously-profitable/)
 15. [Kimi k3 tutorial] (https://github.com/MoonshotAI/Kimi-K3/tree/main)
 16. [Gemini llm and quantum and why](https://share.gemini.google/nuva1xCYRsHF)
+17. [stabilizing_the_power_grid](https://www.reddit.com/r/Bitcoin/comments/w19i32/bitcoin_mining_and_stabilizing_the_power_grid_is/)
+18. [Photonic Mixture-of-Experts](https://www.nature.com/articles/s41467-026-73983-4?utm_source=chatgpt.com)
+19. [Hybrid Quantum Transformer for Language Generation](https://arxiv.org/abs/2511.10653?utm_source=chatgpt.com)
+20. [Quantum simulation of thermodynamics in an integrated quantum photonic processor](https://www.nature.com/articles/s41467-023-38413-9?utm_source=chatgpt.com)
