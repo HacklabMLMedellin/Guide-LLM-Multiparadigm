@@ -364,14 +364,9 @@ S9. PATENTS
 
 9.2  Hybrid Algorithm Patents
 
-     Any Hybrid Algorithm developed as part of the QPT-LLM project shall be
-     owned exclusively by QPT, which shall have the exclusive right to file,
-     prosecute, and maintain patent applications for such algorithms.
+    You retain all right, title, and interest in any Hybrid Algorithm you develop, including the exclusive right to file, prosecute, and maintain patent applications for such algorithms. You do not assign ownership of your Hybrid Algorithms to QPT.
 
-     Contributors who develop Hybrid Algorithms in the course of contributing
-     to the Software agree to assign all right, title, and interest in such
-     algorithms to QPT, and to execute any documents reasonably requested by
-     QPT to perfect such assignment.
+    However, if you contribute a Hybrid Algorithm to the official QPT repository, or distribute it as part of a Derivative Work of the Software, you grant QPT and all recipients of the Software a perpetual, worldwide, royalty-free, non-exclusive license under your patent claims covering the Hybrid Algorithm to make, use, sell, offer for sale, import, and otherwise transfer the Hybrid Algorithm as part of the Software under the terms of this License.
 
 9.3  Patent Retaliation
 
@@ -702,7 +697,7 @@ S15. GENERAL PROVISIONS
 15.6  Contact
 
       For licensing inquiries, trademark permissions, or to report violations,
-      contact QPT at the address published in the official QPT website qpt-ai.com.
+      contact QPT at the address published in the official QPT-LLM repository.
 
 
 ================================================================================
@@ -752,4 +747,3 @@ QPT's long-term objective may include establishing or operating through a
 nonprofit or research-oriented legal organization, subject to applicable law
 and the requirements of the relevant authorities.
 
-     
