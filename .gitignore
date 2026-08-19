@@ -218,6 +218,9 @@ __marimo__/
 .streamlit/secrets.toml
 docs/slides/slide1/media/
 docs/slides/slide1/slides/
+docs/slides/Analogy_for_Presentation/__pycache__/
+docs/slides/Analogy_for_Presentation/media/
+docs/slides/Analogy_for_Presentation/slides
 # Hybrid LLM training outputs
 core/mp-llm/outputs/checkpoints/hybrid_run/benchmark_report.json
 core/mp-llm/outputs/checkpoints/hybrid_run/benchmark_report.md
